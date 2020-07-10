@@ -1,0 +1,4 @@
+{
+  "SqlConnectionString": "Data Source =.; Initial Catalog = GridBeyond; Integrated Security = True",
+  "InputFilePath": "@..\\InputFiles\\SampleSheet.csv"
+}
