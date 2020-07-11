@@ -1,4 +1,7 @@
 {
-  "SqlConnectionString": "Data Source =.; Initial Catalog = GridBeyond; Integrated Security = True",
-  "InputFilePath": "@..\\InputFiles\\SampleSheet.csv"
+  "IsEncrypted": false,
+  "Values": {
+    "SqlConnectionString": "Data Source =.; Initial Catalog = GridBeyond; Integrated Security = True",
+    "InputFilePath": "@..\\InputFiles\\SampleSheet.csv"
+  }
 }

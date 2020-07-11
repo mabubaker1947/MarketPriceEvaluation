@@ -10,9 +10,8 @@ namespace MarketRatesEvaluation.Models.Entities
     {
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
-            //
         }
 
-        public DbSet<MarketPrice> MarketPrices { get; set; }
+        public DbSet<MarketPrice> MarketPrice { get; set; }
     }
 }

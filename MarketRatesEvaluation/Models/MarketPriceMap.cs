@@ -6,9 +6,9 @@ using MarketRatesEvaluation.Models.Entities;
 
 namespace MarketRatesEvaluation.Models
 {
-    public class MarketPlaceMap : CsvHelper.Configuration.ClassMap<MarketPrice>
+    public class MarketPriceMap : CsvHelper.Configuration.ClassMap<MarketPrice>
     {
-        public MarketPlaceMap()
+        public MarketPriceMap()
         {
             Map(m => m.Date).Index(0);
             Map(m => m.MarketPriceEX1).Index(1);

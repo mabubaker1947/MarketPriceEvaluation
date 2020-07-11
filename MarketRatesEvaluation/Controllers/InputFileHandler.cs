@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MarketRatesEvaluation.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,6 +13,8 @@ namespace MarketRatesEvaluation.Controllers
         // GET: InputFileHandler
         public ActionResult Index()
         {
+            var fileReaderService = new FileReaderService();
+            fileReaderService.PopulateCSVToEntity();
             return View();
         }
 
