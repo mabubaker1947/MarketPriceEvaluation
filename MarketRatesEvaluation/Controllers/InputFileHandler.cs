@@ -27,6 +27,8 @@ namespace MarketRatesEvaluation.Controllers
         // GET: InputFileHandler/Create
         public ActionResult Create()
         {
+            var fileReaderService = new FileReaderService();
+            fileReaderService.PopulateCSVToEntity();
             return View();
         }
 

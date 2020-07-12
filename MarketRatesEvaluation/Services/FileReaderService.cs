@@ -50,7 +50,7 @@ namespace MarketRatesEvaluation.Services
             }
             catch (Exception ex)
             {
-                return $"Failed to parse CSV Error was \t:{ex.Message}";
+                return $"Failed to parse CSV file, Error was \t:{ex.Message}";
             }
             return $"Data parsed successfully";
         }
