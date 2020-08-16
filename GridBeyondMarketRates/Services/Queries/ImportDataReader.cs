@@ -11,16 +11,26 @@ using GridBeyondMarketRates.Models.ViewModels;
 using GridBeyondMarketRates.Data.Entities;
 namespace GridBeyondMarketRates.Services.Queries
 {
+    /// <summary>
+    /// Data import reader class
+    /// </summary>
     public class ImportDataReader: IImportDataReader
     {
         private readonly DatabaseContext _dbContext;
 
+        /// <summary>
+        /// constructor for data reader
+        /// </summary>
+        /// <param name="dbContext"></param>
         public ImportDataReader(DatabaseContext dbContext)
         {
             _dbContext = dbContext;
         }
 
-
+        /// <summary>
+        /// calculate stats data
+        /// </summary>
+        /// <returns></returns>
         public StatsModel CalculateStatsData()
         {
             var min = _dbContext.MarketPrices.Min(x => x.MarketPriceEX1);
@@ -50,6 +60,10 @@ namespace GridBeyondMarketRates.Services.Queries
             return statsModel;
         }
 
+        /// <summary>
+        /// Get market price data
+        /// </summary>
+        /// <returns></returns>
         public List<MarketPrice> GetMarketPriceData()
         {
             var data = _dbContext.MarketPrices.Select(x => x).ToList();

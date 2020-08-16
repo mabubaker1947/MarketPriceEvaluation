@@ -15,6 +15,9 @@ using GridBeyondMarketRates.Services.Queries;
 
 namespace GridBeyondMarketRates.Controllers
 {
+    /// <summary>
+    /// Controller for Importing data 
+    /// </summary>
     public class ImportDataController : Controller
     {
         private readonly DatabaseContext _dbContext = new DatabaseContext();
@@ -54,6 +57,10 @@ namespace GridBeyondMarketRates.Controllers
             });
         }
 
+        /// <summary>
+        /// Display the time series data into the chart
+        /// </summary>
+        /// <returns></returns>
         public Task<ActionResult> Details()
         {
             return DoTask(_=>

@@ -9,6 +9,9 @@ using System.Configuration;
 
 namespace GridBeyondMarketRates.Services.Queries
 {
+    /// <summary>
+    /// Import data writer
+    /// </summary>
     public class ImportDataWriter:IImportDataWriter
     {
         private readonly DatabaseContext _dbContext;
@@ -18,6 +21,9 @@ namespace GridBeyondMarketRates.Services.Queries
             _dbContext = dbContext;
         }
 
+        /// <summary>
+        /// Save imported data to database
+        /// </summary>
         public void SaveImportedDataToDatabase()
         {
             var filepath = ConfigurationManager.AppSettings["FilePath"];

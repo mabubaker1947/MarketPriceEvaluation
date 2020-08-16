@@ -8,6 +8,9 @@ using GridBeyondMarketRates.Services.Queries;
 
 namespace GridBeyondMarketRates.Services
 {
+    /// <summary>
+    ///  data importer service
+    /// </summary>
     public class ImportDataService
     {
         private readonly IImportDataWriter _importDataWriter;
@@ -16,6 +19,10 @@ namespace GridBeyondMarketRates.Services
             _importDataWriter = importDataWriter;
         }
 
+        /// <summary>
+        /// Populate CSV data into the Entity
+        /// </summary>
+        /// <returns></returns>
         public string PopulateCSVToEntity()
         {
             try
