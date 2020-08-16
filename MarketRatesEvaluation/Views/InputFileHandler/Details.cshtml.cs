@@ -11,6 +11,11 @@ namespace MarketRatesEvaluation.Views.InputFileHandler
     {
         public string Message { get; private set; } = "PageModel in C#";
 
+        public DetailsModel()
+        {
+            Message += $" COnstructor called at Server time is { DateTime.Now }";
+        }
+
         public void OnGet()
         {
             Message += $" Server time is { DateTime.Now }";

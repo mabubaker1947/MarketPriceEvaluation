@@ -1,0 +1,50 @@
+﻿@model GridBeyondMarketRates.Models.ViewModels.StatsModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Import new Data", "Import")
+    @Html.ActionLink("View Chart Data", "Details")
+</p>
+
+<div class="row">
+
+    <table class="table">
+        <thead>
+        <tr class="font-bold">
+            <th>Average Price</th>
+            <th>Minimum Price</th>
+            <th>Maximum Price</th>
+            <th>Most Expensive Hour Price</th>
+            <th>Most Expensive Hour Date</th>
+            <th>Total Number of Records</th>
+        </tr>
+        </thead>
+
+        <tr>
+            <th>
+                @Model.AvgPrice
+            </th>
+            <th>
+                @Model.MinPrice
+            </th>
+            <th>
+                @Model.MaxPrice
+            </th>
+            <th>
+                @Model.MostExpensiveHourPrice
+            </th>
+            <th>
+                @Model.MostExpensiveHourDate
+            </th>
+            <th>
+                @Model.TotalRecords
+            </th>
+            <th></th>
+        </tr>
+    </table>
+</div>

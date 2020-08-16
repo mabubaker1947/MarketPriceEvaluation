@@ -1,0 +1,24 @@
+﻿@model List<GridBeyondMarketRates.Data.Entities.MarketPrice>
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Chart</h2>
+
+<div>
+    <h4>Market Price Chart</h4>
+    <hr />
+
+        <div class="row">
+            @{
+                var myChart = new Chart(width: 600, height: 400)
+                    .AddTitle("Chart Title")
+                    .AddSeries(
+                        name: "Employee",
+                        yValues: Model.Select(x=>x.MarketPriceEX1).ToList(),
+                        xValue: Model.Select(x=>x.Date).ToList())
+                    .Write();
+            }
+        </div>
+</div>

@@ -1,9 +1,17 @@
-﻿@model object
+﻿@using MarketRatesEvaluation.Views.InputFileHandler
+@model DetailsModel
 
 @{
     ViewBag.Title = "title";
     Layout = "_Layout";
 }
 
-<h2>Hello Hello Check if the data is populated to database</h2>
+@if (Model != null)
+{
+    <h2>@Model.Message</h2>
+}
+else
+{
+    <h2>@Model.Message+"\t Model is null"</h2>
+}
 <a asp-action="Create">Ingest a CSV file now</a>
